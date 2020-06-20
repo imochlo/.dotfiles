@@ -1,0 +1,41 @@
+#!/usr/bin/env python
+# Don't forget to run :MakeX to make script as executable
+
+import os
+import sys
+
+args = sys.argv[1:]
+cwd = os.getcwd()
+
+def print_documentation():
+    """ Insert Documentation here """
+    print(
+        """
+Function: Converts uml files to png and opens png file
+Arguments: .uml files only
+        """
+    )
+
+def args_valid(args):
+    """ Check if arguments are passable"""
+    if any(".uml" not in arg for arg in args) or len(args) <= 0:
+        print_documentation()
+        return False
+    else:
+        return True
+
+def execute(args):
+    files = args
+    for file in files:
+        if '.uml' in file:
+            uml_path = os.path.join(cwd, file)
+            png_file = file.replace('.uml', '.png')
+            png_path = os.path.join(cwd, png_file)
+            os.system(f"java -jar ~/.local/plugins/plantuml.jar {uml_path}")
+            os.system(f"xdg-open {png_path}")
+        else:
+            print("Not an uml file")
+
+if __name__ == "__main__":
+    if args_valid(args):
+        execute(args)

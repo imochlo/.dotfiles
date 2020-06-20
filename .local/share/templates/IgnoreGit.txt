@@ -1,0 +1,16 @@
+# Ignore All
+/*
+
+# Exceptions
+!/docs
+!/src
+!requirements.txt
+!.gitignore
+
+# Exceptions to Exceptions
+**/__pycache__
+**/migrations
+src/venv/
+**/*.sw*
+**/*.fuse*
+*.log

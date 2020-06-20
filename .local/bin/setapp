@@ -1,0 +1,51 @@
+#!/usr/bin/python3
+
+import os
+import sys
+from os.path import expanduser
+home = expanduser("~")
+
+def print_documentation():
+    """ Insert Documentation here """
+    print(
+        """
+Function: sets nvim, tmux, or vim settings
+Arguments: [app] [setting]
+    app: nvim, tmux, vim
+    setting: bare, extended
+        """
+    )
+
+def args_valid(app, config):
+    """ Check if arguments are passable"""
+    if app not in ['vim', 'tmux', 'nvim'] and config not in ['bare', 'extended']:
+        print_documentation()
+        return False
+    else:
+        return True
+
+def execute(app, config):
+    config_path = f"{home}/.config/{app}"
+    if app in ['vim', 'nvim']:
+        config_file = f"{config}.vim"
+    elif app == 'tmux':
+        config_file = f"{config}.conf"
+    runtime_path = {
+        "nvim" : f"{home}/.config/nvim/init.vim", 
+        "vim" : f"{home}/.vimrc", 
+        "tmux" : f"{home}/.tmux.conf", 
+    }
+    os.system(f"cp {config_path}/{config_file} {runtime_path[app]}")
+    """ Insert Main functioin here """
+
+if __name__ == "__main__":
+    try:
+        app = sys.argv[1]
+        config = sys.argv[2]
+        if args_valid(app, config):
+            execute(app, config)
+    except Exception as e:
+        print_documentation()
+
+# WARNING: Don't forget to run :MakeX to make script as executable
+

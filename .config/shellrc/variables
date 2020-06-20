@@ -1,0 +1,3 @@
+#!/bin/env bash
+set DATA_HOME="$HOME/.local"
+set DEV="$HOME/dev"

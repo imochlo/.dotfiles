@@ -1,0 +1,48 @@
+#!/usr/bin/env python
+# Don't forget to run :MakeX to make script as executable
+
+import os
+import sys
+
+args = sys.argv[1:]
+cwd = os.getcwd()
+
+def print_documentation():
+    """ Insert Documentation here """
+    print(
+        """
+Function: Converts markdown files to pdf values and opens pdf document
+Arguments: .md files
+        """
+    )
+
+def args_valid(args):
+    """ Check if arguments are passable"""
+    if any(".md" not in arg for arg in args) or len(args) <= 0:
+        print_documentation()
+        return False
+    else:
+        return True
+
+def execute(args):
+    files = args
+    """ Insert Main functioin here """
+    for file in files:
+        if '.md' in file:
+            md_path = os.path.join(cwd, file)
+            pdf_file = file.replace('.md', '.pdf')
+            pdf_path = os.path.join(cwd, pdf_file)
+            try:
+                # Pandoc is a memory hog. can't handle command
+                # os.system(f"pandoc -V 'geometry:margin=1in' -V 'fontfamily:dejavu' --toc {md_path} -o {pdf_path} --template ~/.pandoc/templates/eisvogel.latex")
+                os.system(f"pandoc -V 'geometry:margin=1in' -V 'fontfamily:dejavu' --toc {md_path} -o {pdf_path}")
+            except Exception as e:
+                print(e)
+            # else:
+                # os.system(f"xdg-open {pdf_path}")
+        else:
+            print("Not an md file")
+
+if __name__ == "__main__":
+    if args_valid(args):
+        execute(args)

@@ -1,0 +1,49 @@
+huge header
+===
+
+smaller header
+---
+
+<blank above for horizontal line>
+---
+
+#<#1-6> header
+
+[link name](url)
+
+[link name][<#>]
+[<#>]:
+
+@user
+
+*italic*
+
+**bold**
+
+***italic and bold***
+
+<s>strike through</s>
+
+>blockquotes
+
+<tab>code / no markdowns applied
+
+* list
++ list
+- list
+1. list
+
+[ ] checkbox
+[x] checked box
+
+table header | table header
+-------------|-------------
+value        |value
+
+[[embed]]
+[[img src=<url> altr=<text>]]
+[[embed url=<url>]]
+
+\* normal asterisk
+
+[TOC] table of contents

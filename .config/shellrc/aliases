@@ -1,0 +1,25 @@
+#!/bin/env bash
+ alias rm="$HOME/.local/plugins/saferm.sh"
+
+# BASIC ALIASES
+alias ls='ls --color=auto'
+
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+alias ll='ls -alF'
+alias la='ls -A'
+
+# CUSTOM ALIASES
+alias r_filter="redshift -O 3200K -P"
+alias r_no_filter="redshift -O 6500K -P"
+alias weka="java -jar ~/weka/weka-3-8-4/weka.jar"
+#alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
+alias shell_theme='bash -c  "$(wget -qO- https://git.io/vQgMr)"'
+
+if which nvim >/dev/null; then
+    alias vim='nvim'
+    alias vi='nvim'
+fi
