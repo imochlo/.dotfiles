@@ -31,4 +31,3 @@ bindkey "^R" history-incremental-search-backward
 
 ##########          COMMON CUSTOMIZATIONS          ##########
 source ~/.config/shellrc/rc.sh
-alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"

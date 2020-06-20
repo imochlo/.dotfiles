@@ -8,25 +8,56 @@ dotfiles checkout
 dotfiles config --local status.showUntrackedFiles no
 
 # Contents
-``` shell
-.config
-├── nvim
-├── tmux
-├── vim
-└── zsh
-    └── [oh-my-zsh] [1]
-.local
-├── bin # custom-made scripts
-│   ├── md2pdf
-│   ├── setapp
-│   └── uml2png
-├── plugins # adopted scripts / tools
-│   ├── [plantuml.jar] [2]
-│   └── [saferm.sh] [3]
-└── share
-    ├── cheatsheets
-    └── templates
-.zshrc
+```
+~
+├── .agignore
+├── .bashrc
+├── .config
+│   ├── nvim
+│   │   ├── bare
+│   │   ├── bare.vim
+│   │   ├── cust.vim
+│   │   ├── extended
+│   │   ├── extended.vim
+│   │   ├── ftdetect
+│   │   ├── init.vim
+│   │   └── .netrwhist
+│   ├── shellrc
+│   │   ├── aliases
+│   │   ├── colors
+│   │   ├── exports
+│   │   ├── rc.sh
+│   │   └── variables
+│   ├── tmux
+│   │   ├── bare.conf
+│   │   ├── extended.conf
+│   │   ├── tmux-colors
+│   │   └── tmux-yank
+│   ├── vim
+│   │   ├── bare
+│   │   ├── bare.vim
+│   │   ├── cust.vim
+│   │   ├── extended
+│   │   ├── extended.vim
+│   │   └── init.vim
+│   └── zsh
+│       └── oh-my-zsh
+├── .dotfiles
+│   ├── dependencies.sh
+│   └── README.md
+├── .local
+│   ├── bin
+│   │   ├── md2pdf
+│   │   ├── setapp
+│   │   ├── uml2png
+│   ├── plugins
+│   │   ├── plantuml.jar
+│   │   └── saferm.sh
+│   └── share
+│       ├── cheatsheets
+│       ├── templates
+├── .vimrc
+└── .zshrc
 ```
 
 # Adopted Tools / Apps
@@ -34,6 +65,7 @@ Thank you to all these developers
 * Zsh configurations: https://github.com/ohmyzsh/ohmyzsh
 * UML Model generator: https://plantuml.com/download
 * Script to move files to Trash using 'rm': https://github.com/lagerspetz/linux-stuff/blob/master/scripts/saferm.sh
+* Tmux Yank: https://github.com/tmux-plugins/tmux-yank
 
 # Apps to install needed for workflow
 * Git
