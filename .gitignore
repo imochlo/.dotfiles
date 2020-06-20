@@ -1,0 +1,6 @@
+.dotfiles.git
+**/*.netrwhist
+**/__pycache__
+**/*.sw*
+**/*.fuse*
+
