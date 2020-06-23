@@ -12,29 +12,28 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # ANACONDA / MINICONDA
 if [[ "$0" == *"bash"* ]]; then
-    __shell="bash"
-else
-    __shell="zsh"
+    __shell="shell.bash"
+elif [[ "$SHELL" == *"zsh"* ]]; then
+    __shell="shell.zsh"
 fi
 if [ -d "$HOME/.local/anaconda3" ]; then
-    __conda_set="anaconda3"
+    __conda_type='anaconda3'
 elif [ -d "$HOME/.local/miniconda3" ]; then
-    __conda_set="miniconda3"
+    __conda_type='miniconda3'
 fi
 
-__conda_setup="$('$HOME/.local/$__conda_set/bin/conda' 'shell.$__shell' 'hook' 2> /dev/null)"
+__conda_setup="$("$HOME/.local/anaconda3/bin/conda" "$__shell" 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
-elif [ -d "$HOME/.local/$__conda_set" ]; then
-    if [ -f "$HOME/.local/$__conda_set/etc/profile.d/conda.sh" ]; then
-        . "$HOME/.local/$__conda_set/etc/profile.d/conda.sh"
+else
+    if [ -f "$HOME/.local/$__conda_type/etc/profile.d/conda.sh" ]; then
+        . "$HOME/.local/$__conda_type/etc/profile.d/conda.sh"
     else
-        export PATH="$HOME/.local/$__conda_set/bin:$PATH"
+        export PATH="$HOME/.local/bin:$PATH"
     fi
 fi
-
 unset __shell
-unset __conda_set
+unset __conda_type
 unset __conda_setup
 
 # fzf
