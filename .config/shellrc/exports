@@ -4,7 +4,7 @@ export PATH=$PATH:~/.local/bin
 
 # yarn for nodejs
 if [ -f "/usr/share/nvm/init-nvm.sh" ]; then
-    source /usr/share/nvm/init-nvm.sh 
+    source /usr/share/nvm/init-nvm.sh
     export PATH=$PATH:~/yarn/bin
 fi
 
@@ -12,32 +12,30 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # ANACONDA / MINICONDA
 if [[ "$0" == *"bash"* ]]; then
-    __conda_setup="$('/home/sam/.local/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-elif [[ "$SHELL" == *"zsh"* ]]; then
-    __conda_setup="$('/home/sam/.local/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+    __shell="bash"
+else
+    __shell="zsh"
+fi
+if [ -d "$HOME/.local/anaconda3" ]; then
+    __conda_set="anaconda3"
+elif [ -d "$HOME/.local/miniconda3" ]; then
+    __conda_set="miniconda3"
 fi
 
+__conda_setup="$('$HOME/.local/$__conda_set/bin/conda' 'shell.$__shell' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
-elif [ -d "$HOME/.local/anaconda3" ]; then
-    # anaconda3
-    if [ -f "$HOME/.local/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "$HOME/.local/anaconda3/etc/profile.d/conda.sh"
+elif [ -d "$HOME/.local/$__conda_set" ]; then
+    if [ -f "$HOME/.local/$__conda_set/etc/profile.d/conda.sh" ]; then
+        . "$HOME/.local/$__conda_set/etc/profile.d/conda.sh"
     else
-        export PATH="$HOME/.local/anaconda3/bin:$PATH"
-    fi
-elif [ -d "$HOME/.local/miniconda3" ]; then
-    # miniconda3
-    if [ -f "$HOME/.local/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "$HOME/.local/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="$HOME/.local/miniconda3/bin:$PATH"
+        export PATH="$HOME/.local/$__conda_set/bin:$PATH"
     fi
 fi
 
+unset __shell
+unset __conda_set
 unset __conda_setup
-
-
 
 # fzf
 if [[ "$0" == *"bash"* ]]; then
