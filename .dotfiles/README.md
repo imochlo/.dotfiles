@@ -67,16 +67,17 @@ Thank you to all these developers
 * Script to move files to Trash using 'rm': https://github.com/lagerspetz/linux-stuff/blob/master/scripts/saferm.sh
 * Tmux Yank: https://github.com/tmux-plugins/tmux-yank
 
-# Apps to install needed for workflow
-* Git
-* Zathura
-* Texlive
-* Pandoc
-* Vim
-* Vifm
-* Jupyter notebook
-* Zeal
-* Powerline fonts
+# Apps Used
+* Git - Version control
+* Zathura - PDF viewer with vim bindings
+* Texlive - For Jupyter notebook and md2pdf script
+* Pandoc - For Jupyter notebook and md2pdf script
+* Vim - Text Editor of choice
+* Vim Plug - Plugin manager used in vim
+* Vifm - Terminal File Manager
+* Jupyter notebook - Code document
+* Zeal - Offline documentation viewer
+* Powerline fonts - Font for tmux and vim-airline
 
 # References
 https://harfangk.github.io/2016/09/18/manage-dotfiles-with-a-git-bare-repository.html

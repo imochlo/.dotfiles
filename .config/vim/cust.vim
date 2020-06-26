@@ -1,9 +1,9 @@
-"~/.config/vim/vimrc
-"~/.config/vim/cust.vim
-"~/.config/vim/bare.vim
-"~/.config/vim/extended.vim
-"~/.config/vim/barerc.vim
-"~/.config/vim/extendedrc.vim
+" ~/.vimrc
+" ~/.config/vim/cust.vim
+" ~/.config/vim/bare/config.vim
+" ~/.config/vim/bare/plugins.vim
+" ~/.config/vim/extended/config.vim
+" ~/.config/vim/extended/plugins.vim
 
 " PLUGIN REQUIREMENTS
     set nocompatible

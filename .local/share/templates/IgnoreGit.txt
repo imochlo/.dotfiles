@@ -4,6 +4,7 @@
 # Exceptions
 !/docs
 !/src
+!README.md
 !requirements.txt
 !.gitignore
 

@@ -1,9 +1,9 @@
 #!/bin/bash
-sudo apt-get curl
+sudo apt-get curl # vim plug
 sudo apt-get install xsel # or xclip
-sudo apt-get install silversearcher-ag
+sudo apt-get install silversearcher-ag # vim
 sudo apt-get install zsh
-sudo apt-get install fonts-powerline
+sudo apt-get install fonts-powerline # airline
 sudo apt install build-essential cmake python3-dev # youcompleteme
 
 wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh /tmp/.
