@@ -19,10 +19,10 @@ alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
 alias shell_theme='bash -c  "$(wget -qO- https://git.io/vQgMr)"'
 alias rm_pycache='rm -rf **/__pycache__' # rm pycache
 
-if which nvim >/dev/null; then
-    alias vim='nvim'
-    alias vi='nvim'
-    alias rm_swp='rm -rf $HOME/.local/share/nvim/swap/*' # rm pycache
-else
-    alias rm_swp='rm -rf **/.*.sw*' # rm pycache
-fi
+#if which nvim >/dev/null; then
+    #alias vim='nvim'
+    #alias vi='nvim'
+    #alias rm_swp='rm -rf $HOME/.local/share/nvim/swap/*' # rm pycache
+#else
+    #alias rm_swp='rm -rf **/.*.sw*' # rm pycache
+#fi

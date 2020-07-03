@@ -4,7 +4,9 @@ My own set of configuration mainly for vim, nvim, tmux and python scripts
 # Instructions
 ## Installing dotfiles to another system
 git clone --bare https://www.github.com/imochlo/.dotfiles.git $HOME/.dotfiles.git
+
 dotfiles checkout
+
 dotfiles config --local status.showUntrackedFiles no
 
 # Contents
