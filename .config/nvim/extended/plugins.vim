@@ -19,3 +19,4 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'vim-ctrlspace/vim-ctrlspace' " Sometimes this needs to be cloned. Doesnt work with Vim Plug
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'vimwiki/vimwiki'

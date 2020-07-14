@@ -26,3 +26,5 @@ alias rm_pycache='rm -rf **/__pycache__' # rm pycache
 #else
     #alias rm_swp='rm -rf **/.*.sw*' # rm pycache
 #fi
+alias wiki='vim ~/.local/share/vimwiki/index.md'
+alias todo='vim ~/.local/share/vimwiki/todo.md'
