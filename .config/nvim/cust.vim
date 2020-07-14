@@ -49,7 +49,8 @@
     set smartcase
     set hlsearch
     set path+=**
-    set wildignore+=*/node_modules/*,_site,*/__pycache__/*,*/venv/*,*/target/*,*/.vim$,\~$,*/.aux,*/.cls,*/.aux,*/.bbl,*/.blg,*/.fls,*/.fdb*/,*/.toc,*/.out,*/.glo,*/.ist,*/.fdb_latexmk,*.pyc,*.o,*~,*.svg,*.ttf,*.eot,*.scss,*.map,*.less,*.min.css,*.woff*,*.min.js,*/vendor/*,*/dash_core_components/*,*/dash_html_components/*,*/dpd_components/*,*/dash_renderer/*,*/migrations/*,__init__.py,*.xls*,*.doc*,*.pdf,*/images/*,*/stylesheets/*,*.tsv,*.old,*.swp,*.plist,*.svg
+    "set wildignore+=*/node_modules/*,_site,*/__pycache__/*,*/venv/*,*/target/*,*/.vim$,\~$,*/.aux,*/.cls,*/.aux,*/.bbl,*/.blg,*/.fls,*/.fdb*/,*/.toc,*/.out,*/.glo,*/.ist,*/.fdb_latexmk,*.pyc,*.o,*~,*.svg,*.ttf,*.eot,*.scss,*.map,*.less,*.min.css,*.woff*,*.min.js,*/vendor/*,*/dash_core_components/*,*/dash_html_components/*,*/dpd_components/*,*/dash_renderer/*,*/migrations/*,__init__.py,*.xls*,*.doc*,*.pdf,*/images/*,*/stylesheets/*,*.tsv,*.old,*.swp,*.plist,*.svg
+set wildignore+=*/node_modules/*,_site,*/__pycache__/*,*/venv/*,*/target/*,*/.vim$,\~$,*/*.aux,*/*.cls,*/*.bbl,*/*.blg,*/*.fls,*/.fdb*/,*/*.toc,*/*.out,*/*.glo,*/*.ist,*/*.fdb_latexmk,*.pyc,*.o,*.svg,*.ttf,*.eot,*.scss,*.map,*.less,*.min.css,*.woff*,*.min.js,*/vendor/*,*/dash_core_components/*,*/dash_html_components/*,*/dpd_components/*,*/dash_renderer/*,*/migrations/*,__init__.py,*.xls*,*.doc*,*.pdf,*/images/*,*/stylesheets/*,*.tsv,*.old,*.swp,*.plist,*.svg
 
 " FOLDING
     set foldenable

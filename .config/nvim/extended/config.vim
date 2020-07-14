@@ -6,7 +6,7 @@
 "~/.config/nvim/extended/plugins.vim
 
 " AIRLINE POWERLINE FONT
-let g:airline_powerline_fonts = 1
+"let g:airline_powerline_fonts = 1
 
 " LIMELIGHT (HIGHLIGHT BLOCKS)
 
@@ -177,3 +177,7 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+" VimWiki
+let g:vimwiki_list = [{'path': '~/.local/share/vimwiki/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
