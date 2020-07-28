@@ -107,6 +107,7 @@ set wildignore+=*/node_modules/*,_site,*/__pycache__/*,*/venv/*,*/target/*,*/.vi
     command Gpp :!g++ % && ./a.out
     command RunPy :!python %
     command MakeX :!chmod u+x %
+    
 
     " Templates
     command TemplGit :-1r $HOME/.local/share/templates/CommitGit.txt
@@ -114,6 +115,10 @@ set wildignore+=*/node_modules/*,_site,*/__pycache__/*,*/venv/*,*/target/*,*/.vi
     command TemplPyScript :-1r $HOME/.local/share/templates/PythonScript.txt
     command TemplUml :-1r $HOME/.local/share/templates/Uml.txt
     command CheatMd :-1r $HOME/.local/share/cheatsheets/md
+
+    " Date
+    command Date :put=strftime('%c') | normal 2o
+    command DateMD :put=strftime('%c') | :s/\(.*\)/\*\*\1\*\*/ | let @/='' | normal 2o
 
 " SYSTEM INTEGRATION
     " Mouse Interaction

@@ -1,9 +1,9 @@
-"~/.config/vim/vimrc
-"~/.config/vim/cust.vim
-"~/.config/vim/bare/config.vim
-"~/.config/vim/bare/plugins.vim
-"~/.config/vim/extended/config.vim
-"~/.config/vim/extended/plugins.vim
+"~/.config/nvim/vimrc
+"~/.config/nvim/cust.vim
+"~/.config/nvim/bare/config.vim
+"~/.config/nvim/bare/plugins.vim
+"~/.config/nvim/extended/config.vim
+"~/.config/nvim/extended/plugins.vim
 
 " Base Plugins
 
