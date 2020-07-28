@@ -5,7 +5,7 @@ setlocal shiftwidth=4
 setlocal softtabstop=4
 
 " Abbreviations
-ab _py_main if __name__ == "__main__":
+abbrev _py_main if __name__ == "__main__":
 
 " Jupyter-vim
-ab _cell # <codecell>
+abbrev _cell # <codecell>
