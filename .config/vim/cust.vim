@@ -116,6 +116,15 @@
     " CheatSheets
     command CheatMd :50vs $HOME/.config/cheatsheets/md
 
+    " Date
+    function! DateInfo(setting)
+        " 1 for iso, 0 for cust
+        return (a:setting) ? strftime('%c') : strftime('%b-%d-%y-%a')
+    endfunction
+
+    abbrev __date <C-R>=DateInfo(0)<CR>
+    abbrev __datetime <C-R>=DateInfo(1)<CR>
+
 " SYSTEM INTEGRATION
     " Mouse Interaction
     set mouse=a

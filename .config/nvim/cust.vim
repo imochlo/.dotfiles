@@ -117,8 +117,13 @@ set wildignore+=*/node_modules/*,_site,*/__pycache__/*,*/venv/*,*/target/*,*/.vi
     command CheatMd :-1r $HOME/.local/share/cheatsheets/md
 
     " Date
-    command Date :put=strftime('%c') | normal 2o
-    command DateMD :put=strftime('%c') | :s/\(.*\)/\*\*\1\*\*/ | let @/='' | normal 2o
+    function! DateInfo(setting)
+        " 1 for iso, 0 for cust
+        return (a:setting) ? strftime('%c') : strftime('%b-%d-%y-%a')
+    endfunction
+
+    abbrev __date <C-R>=DateInfo(0)<CR>
+    abbrev __datetime <C-R>=DateInfo(1)<CR>
 
 " SYSTEM INTEGRATION
     " Mouse Interaction
