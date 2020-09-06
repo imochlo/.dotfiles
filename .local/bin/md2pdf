@@ -28,14 +28,15 @@ def args_valid(args):
 def execute(args):
     files = args
     """ Insert Main functioin here """
-    for file in files:
+    for file in files: 
         if '.md' in file:
             md_path = os.path.join(cwd, file)
             pdf_file = file.replace('.md', '.pdf')
             pdf_path = os.path.join(cwd, pdf_file)
             try:
-                os.system(f"pandoc {md_path} -o {pdf_path} --toc --listings --template {TEMPLATE}")
+                os.system(f"pandoc --pdf-engine=xelatex {md_path} -o {pdf_path} --toc --listings --template {TEMPLATE}")
             except Exception as e:
+                print("can't use eisvogel template")
                 try:
                     os.system(f"pandoc --pdf-engine=xelatex -V 'geometry:margin=1in' -V 'mainfont=Arial' -V fontsize=20 --toc --highlight-style=zenburn {md_path} -o {pdf_path}")
                 except Exception as e:
