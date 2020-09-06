@@ -13,6 +13,7 @@
 #sudo apt-get install npm
 #sudo apt-get install python-pip
 sudo apt-get install texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
+sudo apt-get install ttf-mscorefonts-installer
 sudo apt-get install software-properties-common
 sudo apt-get install python-dev python-pip python3-dev python3-pip
 sudo apt-get install chromium-chromedriver
