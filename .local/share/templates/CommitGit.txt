@@ -1,4 +1,12 @@
-Commit:
+#################################################
+[BUGFIX]|[FEATURE]
+# Subject / brief title
+#######################################################################
+PROBLEM:
+# Problem, Task, Reason for Commit
 
-Next goal:
+SOLUTION:
+# Solution or List of Changes
 
+NOTE:
+# Special instructions, testing steps, rake, etc
