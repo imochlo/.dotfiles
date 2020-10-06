@@ -112,6 +112,7 @@
     command TemplIgnore :-1r $HOME/.local/share/templates/IgnoreGit.txt
     command TemplPyScript :-1r $HOME/.local/share/templates/PythonScript.txt
     command TemplUml :-1r $HOME/.local/share/templates/Uml.txt
+    command TemplDocPy :-1r $HOME/.local/share/templates/Docstring.txt
 
     " CheatSheets
     command CheatMd :50vs $HOME/.config/cheatsheets/md
