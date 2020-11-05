@@ -18,6 +18,8 @@ alias weka="java -jar ~/weka/weka-3-8-4/weka.jar"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
 alias shell_theme='bash -c  "$(wget -qO- https://git.io/vQgMr)"'
 alias rm_pycache='rm -rf **/__pycache__' # rm pycache
+alias rm_migrations='rm -rf **/migrations' # rm migrations django
+alias rm_swap='rm -rf ~/.local/share/nvim/swap/*' # rm migrations django
 
 #if which nvim >/dev/null; then
     #alias vim='nvim'

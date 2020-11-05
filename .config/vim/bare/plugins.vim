@@ -13,7 +13,9 @@ Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdcommenter'
-Plug 'jupyter-vim/jupyter-vim'
+try
+    Plug 'jupyter-vim/jupyter-vim'
+endtry
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'MTDL9/vim-log-highlighting'
