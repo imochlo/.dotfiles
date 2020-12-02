@@ -36,6 +36,7 @@ def execute(args):
     # Repo
     os.mkdir(f'{repo}')
     os.mkdir(f'{repo}/docs')
+    os.mkdir(f'{repo}/docs')
     os.mkdir(f'{repo}/notebook')
     os.mkdir(f'{src}')
     os.mkdir(f'{repo}/tmp')
